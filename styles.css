@@ -37,3 +37,55 @@ input {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 10px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffd700; 
+}
+
+/* --------------------My Responsive Navbar ------------------*/
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+    .navbar.active .nav-links {
+        display: flex;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+}
